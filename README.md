@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+# Flixora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación full stack orientada a la exploración y gestión de un catálogo audiovisual, inspirada en la experiencia de plataformas de streaming modernas.
 
-Currently, two official plugins are available:
+Flixora está planteado como un proyecto de práctica enfocado en arquitectura escalable, reutilización de componentes, diseño de interfaces modernas y construcción de una base sólida tanto para frontend como para backend. Actualmente ya cuenta con una base funcional en la capa cliente, con una página principal con contenido destacado, un catálogo de películas con filtros y formularios, y secciones preparadas para series y contenido infantil.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Vista general
 
-## React Compiler
+- Descubrimiento de contenido desde una página principal con secciones destacadas.
+- Catálogo de películas con filtros por género, estado y orden.
+- Formularios modales para registrar nuevo contenido.
+- Navegación por áreas separadas: `Home`, `Movies`, `Series` y `Kids`.
+- Componentes, layouts y utilidades organizados para favorecer reutilización.
+- Base pensada para evolucionar hacia una arquitectura full stack con API, persistencia de datos y autenticación.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Características principales
 
-## Expanding the ESLint configuration
+| Área          | Descripción                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| Home          | Muestra una colecciones de `contenido general` para facilitar el descubrimiento.         |
+| Movies        | Centraliza el catálogo principal con filtros, resultados y acciones de gestión.          |
+| Series        | Sección preparada para extender el mismo patrón reutilizable del catálogo.               |
+| Kids          | Espacio orientado a contenido familiar con una experiencia más simple y guiada.          |
+| UI compartida | Incluye componentes reutilizables para botones, inputs, modales, estados vacíos y carga. |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack tecnológico
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Tecnología            | Uso en el proyecto                                     |
+| --------------------- | ------------------------------------------------------ |
+| React 19              | Construcción de la interfaz de usuario                 |
+| TypeScript            | Tipado estático y mejor mantenibilidad                 |
+| Vite                  | Entorno de desarrollo y build                          |
+| React Router          | Navegación entre páginas                               |
+| Tailwind CSS          | Estilos utilitarios y diseño responsive                |
+| React Hook Form       | Manejo de formularios                                  |
+| Zod                   | Validación de datos                                    |
+| Lucide React          | Iconografía                                            |
+| Bun                   | Gestión alternativa de dependencias y scripts          |
+| ASP.NET Core          | Backend planeado para exponer la API del proyecto      |
+| Entity Framework Core | Acceso y persistencia de datos en el backend           |
+| SQL Server            | Base de datos prevista para la aplicación              |
+| JWT Authentication    | Estrategia planeada para autenticación y autorización  |
+| AutoMapper            | Mapeo entre entidades y DTOs en el backend             |
+| Docker                | Contenerización prevista para el entorno de despliegue |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Estructura del proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+La base actual del proyecto está organizada por responsabilidades para mantener una arquitectura clara y fácil de escalar desde el frontend, dejando espacio para integrar la capa backend conforme avance el desarrollo:
+
+```txt
+src/
+├── app/        # layouts y configuración principal
+├── assets/     # recursos estáticos
+├── features/   # módulos por dominio, como home o movies
+├── shared/     # componentes, tipos y utilidades reutilizables
+├── styles/     # estilos globales
+└── main.tsx    # punto de entrada
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Primeros pasos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Instalación
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+bun/npm install
 ```
+
+### Desarrollo
+
+```bash
+bun/npm run dev
+```
+
+### Scripts disponibles
+
+```bash
+bun/npm run build
+bun/npm run preview
+bun/npm run lint
+```
+
+## Objetivo del proyecto
+
+Flixora sirve como práctica para reforzar conceptos de desarrollo full stack moderno, entre ellos:
+
+- Arquitectura basada en features
+- Composición de interfaces reutilizables
+- Formularios con validación tipada
+- Manejo de rutas y layouts
+- Filtros dinámicos para catálogos
+- Organización de código orientada a escalabilidad
+- Diseño y consumo de APIs
+- Persistencia de datos
+- Autenticación y autorización
+- Integración entre cliente y servidor
+
+## Estado actual
+
+#### EN CONSTRUCCIÓN 🚧
+
+Actualmente el proyecto continúa en desarrollo, incorporando progresivamente nuevas funcionalidades que vaya conociendo y aprendiendo. La parte backend está contemplada como la siguiente fase para incorporar persistencia, autenticación y conexión real con la aplicación cliente.
+
+## Autor
+
+#### @WITHER WALKER
+
+Desarrollado como proyecto de práctica personal para seguir consolidando conocimientos de React, TypeScript y desarrollo full stack con una arquitectura mantenible y escalable.
