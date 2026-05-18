@@ -22,8 +22,8 @@ export default function NavbarGenres() {
               className={({ isActive }) =>
                 `inline-flex rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
                   isActive
-                    ? "border-support-500 bg-support-600 text-white shadow-[0_18px_48px_-24px_rgba(15,119,114,0.34)]"
-                    : "border-surface-200 bg-white/90 text-surface-800 hover:border-support-300 hover:bg-support-50 hover:text-support-800"
+                    ? "border-2 border-surface-900 bg-brand-500 text-white shadow-[3px_3px_0_#2b2c34]"
+                    : "border-2 border-surface-900 bg-surface-50 text-surface-900 hover:bg-support-300"
                 }`
               }
             >

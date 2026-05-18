@@ -29,17 +29,14 @@ export default function Filter({
   if (!isOpen) return null;
 
   return (
-    <aside
-      aria-label="Movie filters"
-      className="surface-panel rounded-3xl p-6"
-    >
+    <aside aria-label="Movie filters" className="surface-panel rounded-md p-6">
       <form
         className="flex flex-col gap-6"
         onSubmit={(event) => event.preventDefault()}
       >
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-semibold text-surface-950">Filters</h2>
+            <h2 className="text-lg font-black text-surface-900">Filters</h2>
 
             <p className="text-sm text-muted">Refine your movie search</p>
           </div>
@@ -77,7 +74,7 @@ export default function Filter({
           />
         </div>
 
-        <fieldset className="flex flex-wrap gap-4 border-t border-surface-200 pt-4">
+        <fieldset className="flex flex-wrap gap-4 border-t-2 border-surface-900 pt-4">
           <legend className="sr-only">Additional filters</legend>
           <div className="flex flex-wrap gap-4">
             <Checkbox
@@ -89,7 +86,7 @@ export default function Filter({
           </div>
         </fieldset>
 
-        <footer className="flex flex-wrap justify-end gap-2 border-t border-surface-200 pt-4">
+        <footer className="flex flex-wrap justify-end gap-2 border-t-2 border-surface-900 pt-4">
           <div className="flex gap-2">
             <Button
               size="sm"

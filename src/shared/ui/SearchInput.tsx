@@ -15,18 +15,18 @@ export default function SearchInput({
   return (
     <div className="flex w-full flex-col gap-2">
       {label && (
-        <label htmlFor={id} className="text-sm font-medium text-surface-800">
+        <label htmlFor={id} className="text-sm font-bold text-surface-900">
           {label}
         </label>
       )}
 
-      <div className="flex items-center gap-3 rounded-xl border border-surface-200 bg-white/90 px-4 py-3 transition-all duration-200 focus-within:border-brand-400 focus-within:bg-white focus-within:shadow-[0_18px_48px_-24px_rgba(109,91,208,0.42)] focus-within:ring-4 focus-within:ring-brand-200/60">
-        <Search size={18} className="text-support-600" />
+      <div className="flex items-center gap-3 rounded-md border-2 border-surface-900 bg-surface-50 px-4 py-3 transition-all duration-200 focus-within:shadow-[4px_4px_0_#d1d1e9] focus-within:ring-4 focus-within:ring-brand-100">
+        <Search size={18} className="text-brand-500" />
 
         <input
           id={id}
           type="text"
-          className={`w-full bg-transparent text-sm outline-none placeholder:text-surface-800/45 ${className}`}
+          className={`w-full bg-transparent text-sm outline-none placeholder:text-surface-900/45 ${className}`}
           {...props}
         />
       </div>

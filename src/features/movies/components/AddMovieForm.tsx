@@ -34,7 +34,7 @@ export default function AddMovieForm({ onClose }: AddMovieFormProps) {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="movie-title"
-          className="text-sm font-medium text-surface-800"
+          className="text-sm font-bold text-surface-900"
         >
           Title
         </label>
@@ -45,7 +45,7 @@ export default function AddMovieForm({ onClose }: AddMovieFormProps) {
           placeholder="Movie title"
           {...register("title")}
           autoComplete="off"
-          className="rounded-xl border border-surface-200 bg-white px-4 py-3 outline-none transition-all duration-200 focus:border-brand-400 focus:shadow-[0_18px_48px_-24px_rgba(109,91,208,0.42)] focus:ring-4 focus:ring-brand-200/60"
+          className="rounded-md border-2 border-surface-900 bg-surface-50 px-4 py-3 outline-none transition-all duration-200 focus:shadow-[4px_4px_0_#d1d1e9] focus:ring-4 focus:ring-brand-100"
         />
 
         {errors.title && (
@@ -56,7 +56,7 @@ export default function AddMovieForm({ onClose }: AddMovieFormProps) {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="poster-url"
-          className="text-sm font-medium text-surface-800"
+          className="text-sm font-bold text-surface-900"
         >
           Poster URL
         </label>
@@ -67,7 +67,7 @@ export default function AddMovieForm({ onClose }: AddMovieFormProps) {
           placeholder="https://..."
           {...register("posterUrl")}
           autoComplete="off"
-          className="rounded-xl border border-surface-200 bg-white px-4 py-3 outline-none transition-all duration-200 focus:border-brand-400 focus:shadow-[0_18px_48px_-24px_rgba(109,91,208,0.42)] focus:ring-4 focus:ring-brand-200/60"
+          className="rounded-md border-2 border-surface-900 bg-surface-50 px-4 py-3 outline-none transition-all duration-200 focus:shadow-[4px_4px_0_#d1d1e9] focus:ring-4 focus:ring-brand-100"
         />
 
         {errors.posterUrl && (

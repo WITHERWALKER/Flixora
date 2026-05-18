@@ -8,7 +8,7 @@ export default function LoadingPage({ message }: LoadingPageProps) {
       className="mx-auto flex w-full flex-col items-center justify-center gap-4"
       aria-live="polite"
     >
-      <p className="text-2xl font-semibold text-surface-950">{message}</p>
+      <p className="text-2xl font-black text-surface-900">{message}</p>
     </section>
   );
 }

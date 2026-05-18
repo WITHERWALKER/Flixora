@@ -10,7 +10,7 @@ export default function EmptyState({
   description,
 }: EmptyStateProps) {
   return (
-    <section className="surface-card flex w-full flex-col items-center justify-center gap-4 rounded-3xl p-6 text-center sm:flex-row sm:text-left">
+    <section className="surface-card flex w-full flex-col items-center justify-center gap-4 rounded-md p-6 text-center sm:flex-row sm:text-left">
       <img
         src={NotFoundImage}
         alt=""
@@ -19,7 +19,7 @@ export default function EmptyState({
       />
 
       <div className="space-y-2">
-        <h2 className="text-xl font-semibold text-surface-950">{title}</h2>
+        <h2 className="text-xl font-black text-surface-900">{title}</h2>
         <p className="text-sm text-muted">{description}</p>
       </div>
     </section>

@@ -18,14 +18,14 @@ export default function Select({
   return (
     <div className="flex w-full flex-col gap-2">
       {label && (
-        <label htmlFor={id} className="text-sm font-medium text-surface-800">
+        <label htmlFor={id} className="text-sm font-bold text-surface-900">
           {label}
         </label>
       )}
 
       <select
         id={id}
-        className={`h-12 rounded-xl border border-surface-200 bg-white/90 px-4 text-sm outline-none transition-all duration-200 focus:border-brand-400 focus:bg-white focus:shadow-[0_18px_48px_-24px_rgba(109,91,208,0.42)] focus:ring-4 focus:ring-brand-200/60 ${className}`}
+        className={`h-12 rounded-md border-2 border-surface-900 bg-surface-50 px-4 text-sm outline-none transition-all duration-200 focus:shadow-[4px_4px_0_#d1d1e9] focus:ring-4 focus:ring-brand-100 ${className}`}
         {...props}
       >
         {options.map((option) => (

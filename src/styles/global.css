@@ -3,43 +3,43 @@
 
 @theme {
   --font-inter: "Inter Variable", sans-serif;
-  --color-brand-50: #f4f1ff;
-  --color-brand-100: #e8e2ff;
-  --color-brand-200: #d4c8ff;
-  --color-brand-300: #b7a4f7;
-  --color-brand-400: #8f78e5;
-  --color-brand-500: #6d5bd0;
-  --color-brand-600: #5846b8;
-  --color-brand-700: #46358f;
-  --color-brand-800: #372a70;
-  --color-brand-900: #2d245c;
-  --color-brand-950: #1c153d;
-  --color-surface-50: #fafafc;
-  --color-surface-100: #f2f4f7;
-  --color-surface-200: #e2e6ec;
-  --color-surface-300: #cbd2dc;
-  --color-surface-700: #5b6472;
-  --color-surface-800: #3b4350;
-  --color-surface-900: #222838;
-  --color-surface-950: #151926;
-  --color-support-50: #eaf8f6;
-  --color-support-100: #d2f0ed;
-  --color-support-200: #a8e0da;
-  --color-support-300: #73cac2;
-  --color-support-400: #39aea6;
-  --color-support-500: #178f88;
-  --color-support-600: #0f7772;
-  --color-support-700: #105f5c;
-  --color-support-800: #124c4a;
-  --color-support-900: #123f3e;
-  --color-accent-50: #fff8e7;
-  --color-accent-100: #ffeec2;
-  --color-accent-200: #ffdd87;
-  --color-accent-300: #ffc94c;
-  --color-accent-400: #f3af20;
-  --color-accent-500: #d99113;
-  --color-accent-600: #b66e0d;
-  --color-accent-700: #92520f;
+  --color-brand-50: #f3f0ff;
+  --color-brand-100: #e7e1ff;
+  --color-brand-200: #d4caff;
+  --color-brand-300: #b7a7ff;
+  --color-brand-400: #8b73f6;
+  --color-brand-500: #6246ea;
+  --color-brand-600: #5338d5;
+  --color-brand-700: #432bb8;
+  --color-brand-800: #372391;
+  --color-brand-900: #2e2171;
+  --color-brand-950: #1d1544;
+  --color-surface-50: #fffffe;
+  --color-surface-100: #f7f7fb;
+  --color-surface-200: #ececf4;
+  --color-surface-300: #d1d1e9;
+  --color-surface-700: #565869;
+  --color-surface-800: #3b3d4d;
+  --color-surface-900: #2b2c34;
+  --color-surface-950: #1f2027;
+  --color-support-50: #f7f7fb;
+  --color-support-100: #eeeef7;
+  --color-support-200: #e2e2f0;
+  --color-support-300: #d1d1e9;
+  --color-support-400: #b9b9da;
+  --color-support-500: #9696c4;
+  --color-support-600: #7676a7;
+  --color-support-700: #5e5f88;
+  --color-support-800: #4d4e70;
+  --color-support-900: #41425d;
+  --color-accent-50: #fff1f1;
+  --color-accent-100: #ffe1e1;
+  --color-accent-200: #ffc8c8;
+  --color-accent-300: #ffa1a1;
+  --color-accent-400: #ff6b6b;
+  --color-accent-500: #e45858;
+  --color-accent-600: #cf3d3d;
+  --color-accent-700: #ad2f2f;
 }
 
 @layer base {
@@ -48,7 +48,7 @@
   }
 
   * {
-    @apply border-surface-200;
+    @apply border-surface-900;
   }
 
   ::selection {
@@ -56,13 +56,20 @@
   }
 
   body {
-    @apply font-inter bg-surface-50 text-surface-950 antialiased;
-    background-image: linear-gradient(
-      180deg,
-      rgb(250 250 252 / 1) 0%,
-      rgb(242 244 247 / 1) 45%,
-      rgb(234 248 246 / 0.5) 100%
-    );
+    @apply font-inter bg-surface-50 text-surface-900 antialiased;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: none;
+  }
+
+  body::after {
+    content: none;
+  }
+
+  #root {
+    min-height: 100vh;
   }
 
   a {
@@ -76,45 +83,39 @@
   input,
   select,
   textarea {
-    @apply text-surface-950;
+    @apply text-surface-900;
   }
 }
 
 @layer components {
   .surface-app {
-    @apply bg-surface-50 text-surface-950;
+    @apply bg-surface-50 text-surface-900;
   }
 
   .surface-panel {
-    @apply border border-surface-200 bg-surface-100;
-    background-image: linear-gradient(
-      135deg,
-      #ffffff 0%,
-      #f2f4f7 58%,
-      #eaf8f6 100%
-    );
-    box-shadow: 0 12px 32px -18px rgba(21, 25, 38, 0.16);
+    @apply border-2 border-surface-900 bg-surface-50;
+    box-shadow: 6px 6px 0 #d1d1e9;
   }
 
   .surface-card {
-    @apply border border-surface-200 bg-white/95 backdrop-blur-sm;
-    box-shadow: 0 12px 32px -18px rgba(21, 25, 38, 0.16);
+    @apply border-2 border-surface-900 bg-surface-50;
+    box-shadow: 6px 6px 0 #d1d1e9;
   }
 
   .surface-elevated {
-    @apply border border-brand-200 bg-white;
-    box-shadow: 0 18px 48px -24px rgba(109, 91, 208, 0.42);
+    @apply border-2 border-surface-900 bg-surface-50;
+    box-shadow: 6px 6px 0 #d1d1e9;
   }
 
   .text-muted {
-    @apply text-surface-700;
+    @apply text-surface-900/80;
   }
 
   .text-accent {
-    @apply text-accent-600;
+    @apply text-brand-500;
   }
 
-  .ring-brand {
-    @apply focus:outline-none focus:ring-4 focus:ring-brand-200/70;
-  }
+  /* .ring-brand {
+    @apply focus:outline-none focus:ring-4 focus:ring-brand-200;
+  } */
 }

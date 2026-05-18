@@ -13,9 +13,9 @@ export default function ListFilms({ movies, title }: ListFilmsProps) {
   return (
     <section
       aria-labelledby={sectionId}
-      className="surface-card flex flex-col gap-4 rounded-3xl p-5"
+      className="surface-card flex flex-col gap-4 rounded-md p-5"
     >
-      <h2 id={sectionId} className="text-xl font-semibold text-surface-950">
+      <h2 id={sectionId} className="text-xl font-black text-surface-900">
         {title}
       </h2>
 

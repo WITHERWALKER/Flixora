@@ -14,7 +14,7 @@ export default function HeaderSections({
   return (
     <header className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
       <div className="space-y-1">
-        <h1 className="text-3xl font-semibold text-surface-950">
+        <h1 className="text-4xl font-black text-surface-900">
           {sectionTitle}
         </h1>
         {description && <p className="text-sm text-muted">{description}</p>}

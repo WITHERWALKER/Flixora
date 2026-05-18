@@ -18,7 +18,7 @@ export default function Modal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-brand-950/45 p-4 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-surface-900/40 p-4">
       <button
         type="button"
         aria-label="Close modal"
@@ -30,11 +30,11 @@ export default function Modal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? "modal-title" : undefined}
-        className="surface-elevated relative w-full max-w-lg rounded-3xl p-6"
+        className="surface-elevated relative w-full max-w-lg rounded-md p-6"
       >
         <div className="mb-6 flex items-center justify-between">
           {title && (
-            <h2 id="modal-title" className="text-xl font-semibold text-surface-950">
+            <h2 id="modal-title" className="text-xl font-black text-surface-900">
               {title}
             </h2>
           )}

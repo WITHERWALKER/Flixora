@@ -9,7 +9,7 @@ export default function Loading({ message }: LoadingProps) {
       aria-live="polite"
     >
       <div className="loader"></div>
-      <p className="text-surface-950">{message}</p>
+      <p className="font-bold text-surface-900">{message}</p>
     </section>
   );
 }

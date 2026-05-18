@@ -44,7 +44,7 @@ export default function HomePage() {
 
         <section className="space-y-4">
           <div className="space-y-1">
-            <h2 className="text-2xl font-semibold text-surface-950">
+            <h2 className="text-2xl font-black text-surface-900">
               Browse by genre
             </h2>
             <p className="text-sm text-muted">

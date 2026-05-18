@@ -10,10 +10,10 @@ export default function Checkbox({
   ...props
 }: CheckboxProps) {
   return (
-    <label className="flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2 text-sm text-surface-800 transition-colors hover:bg-support-50">
+    <label className="flex cursor-pointer items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-surface-900 transition-colors hover:bg-brand-50">
       <input
         type="checkbox"
-        className={`size-4 rounded border-surface-300 accent-brand-500 ${className}`}
+        className={`size-4 rounded border-2 border-surface-900 accent-brand-500 ${className}`}
         {...props}
       />
 

@@ -12,18 +12,18 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <header className="border-b border-surface-200 bg-white/90 backdrop-blur-xl">
+    <header className="border-b-2 border-surface-900 bg-surface-50">
       <nav
         aria-label="Primary"
         className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-6 lg:flex-row lg:items-center lg:justify-between"
       >
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-14">
           <NavLink to="/" className="flex items-center gap-3">
-            <span className="grid size-11 place-items-center rounded-2xl bg-surface-950 text-lg font-black italic text-white shadow-[0_16px_40px_-22px_rgba(21,25,38,0.55)] ring-2 ring-accent-300/70">
+            <span className="grid size-11 place-items-center rounded-md border-2 border-surface-900 bg-brand-500 text-lg font-black text-white shadow-[3px_3px_0_#2b2c34]">
               F
             </span>
 
-            <span className="text-2xl font-bold italic text-surface-950">
+            <span className="text-3xl font-black text-surface-900">
               Flixora
             </span>
           </NavLink>
@@ -35,9 +35,9 @@ export default function Navbar() {
                   to={item.path}
                   className={({ isActive }) =>
                     `
-                  rounded-full px-3 py-2 text-lg font-medium transition-all duration-200
-                  hover:bg-support-50 hover:text-support-800
-                  ${isActive ? "bg-brand-50 text-brand-700" : "text-surface-700"}
+                  rounded-md border-2 px-3 py-2 text-lg font-bold transition-all duration-200
+                  hover:border-surface-900 hover:bg-brand-50 hover:text-brand-700
+                  ${isActive ? "border-surface-900 bg-support-300 text-surface-900" : "border-transparent text-surface-900/70"}
                   `
                   }
                 >
@@ -52,7 +52,7 @@ export default function Navbar() {
           <button
             type="button"
             aria-label="Search in Flixora"
-            className="rounded-full p-2 text-surface-700 transition-colors hover:bg-support-50 hover:text-support-800"
+            className="rounded-md border-2 border-transparent p-2 text-surface-900 transition-colors hover:border-surface-900 hover:bg-brand-50 hover:text-brand-500"
           >
             <Search />
           </button>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <button
             type="button"
             aria-label="Open notifications"
-            className="rounded-full p-2 text-surface-700 transition-colors hover:bg-support-50 hover:text-support-800"
+            className="rounded-md border-2 border-transparent p-2 text-surface-900 transition-colors hover:border-surface-900 hover:bg-brand-50 hover:text-brand-500"
           >
             <Bell />
           </button>
@@ -68,7 +68,7 @@ export default function Navbar() {
           <button
             type="button"
             aria-label="Open user profile"
-            className="rounded-full ring-2 ring-transparent transition-all hover:ring-accent-300"
+            className="rounded-full border-2 border-surface-900 transition-all hover:shadow-[3px_3px_0_#2b2c34]"
           >
             <img
               src="https://media.glamour.mx/photos/65b096f13756393e0200c63d/16:9/w_2560%2Cc_limit/que-significa-tu-foto-de-perfil.jpg"

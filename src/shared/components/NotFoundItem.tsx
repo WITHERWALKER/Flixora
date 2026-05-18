@@ -6,9 +6,9 @@ interface NotFoundItemProps {
 
 export default function NotFoundItem({ message }: NotFoundItemProps) {
   return (
-    <section className="surface-panel flex w-full items-center justify-center gap-4 rounded-2xl p-4">
+    <section className="surface-panel flex w-full items-center justify-center gap-4 rounded-md p-4">
       <img src={NotFoundImage} alt="" aria-hidden="true" className="w-44" />
-      <p className="text-xl font-medium text-surface-950">{message}</p>
+      <p className="text-xl font-bold text-surface-900">{message}</p>
     </section>
   );
 }
